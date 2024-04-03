@@ -1,0 +1,39 @@
+{
+    "model_name": "AdaBoost",
+    "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+    "save_dir": ".",
+    "classification": {
+        "method": "classification",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 2]
+            },
+            "int": {
+                "n_estimators": [50, 200]
+            },
+            "choice": {
+                "algorithm": ["SAMME", "SAMME.R"]
+            },
+            "maximum": true,
+            "scoring": "accuracy"
+        }
+    },
+    "regression": {
+        "method": "regression",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 2]
+            },
+            "int": {
+                "n_estimators": [50, 200]
+            },
+            "choice": {
+                "loss": ["linear", "square", "exponential"]
+            },
+            "maximum": false,
+            "scoring": "neg_mean_squared_error"
+        }
+    }
+}

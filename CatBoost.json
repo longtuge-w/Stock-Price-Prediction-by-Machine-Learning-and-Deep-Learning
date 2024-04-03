@@ -1,0 +1,39 @@
+{
+    "model_name": "CatBoost",
+    "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+    "save_dir": ".",
+    "classification": {
+        "method": "classification",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 1],
+                "subsample": [0.1, 1]
+            },
+            "int": {
+                "iterations": [100, 1000],
+                "depth": [3, 10]
+            },
+            "choice": {},
+            "maximum": true,
+            "scoring": "accuracy"
+        }
+    },
+    "regression": {
+        "method": "regression",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 1],
+                "subsample": [0.1, 1]
+            },
+            "int": {
+                "iterations": [100, 1000],
+                "depth": [3, 10]
+            },
+            "choice": {},
+            "maximum": false,
+            "scoring": "neg_mean_squared_error"
+        }
+    }
+}

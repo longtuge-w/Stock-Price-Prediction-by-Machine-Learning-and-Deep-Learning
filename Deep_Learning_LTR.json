@@ -1,0 +1,20 @@
+{
+    "global_settings": {
+        "BATCH_SIZE": 256,
+        "SEQ_LEN": 30,
+        "LEARNING_RATE": 1e-4,
+        "MOMENTUM": 0.9,
+        "WEIGHT_DECAY": 5e-5,
+        "MAX_EPOCH": 100,
+        "TEST_SIZE": 0.2,
+        "RANDOM_SEED": 42,
+        "PATIENCE": 5
+    },
+    "regression": {
+        "save_dir": ".",
+        "model_name": "LSTM",
+        "loss_name": "ListMLE",
+        "method": "regression",
+        "ignore_cols": ["Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "return", "label"]
+    }
+}

@@ -1,0 +1,39 @@
+{
+    "model_name": "RF",
+    "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+    "save_dir": ".",
+    "classification": {
+        "method": "classification",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "max_features": [0.1, 1]
+            },
+            "int": {
+                "n_estimators": [10, 200],
+                "max_depth": [3, 20]
+            },
+            "choice": {
+                "criterion": ["gini", "entropy"]
+            },
+            "maximum": true,
+            "scoring": "accuracy"
+        }
+    },
+    "regression": {
+        "method": "regression",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "max_features": [0.1, 1]
+            },
+            "int": {
+                "n_estimators": [10, 200],
+                "max_depth": [3, 20]
+            },
+            "choice": {},
+            "maximum": false,
+            "scoring": "neg_mean_squared_error"
+        }
+    }
+}

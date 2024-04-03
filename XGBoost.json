@@ -1,0 +1,47 @@
+{
+    "model_name": "XGBoost",
+    "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+    "save_dir": ".",
+    "classification": {
+        "method": "classification",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 1],
+                "subsample": [0.5, 1],
+                "colsample_bytree": [0.5, 1],
+                "reg_lambda": [0.01, 10],
+                "reg_alpha": [0.01, 10]
+            },
+            "int": {
+                "n_estimators": [100, 1000],
+                "max_depth": [3, 20]
+            },
+            "choice": {},
+            "maximum": true,
+            "scoring": "accuracy"
+        }
+    },
+    "regression": {
+        "method": "regression",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "learning_rate": [0.01, 1],
+                "subsample": [0.5, 1],
+                "colsample_bytree": [0.5, 1],
+                "reg_lambda": [0.01, 10],
+                "reg_alpha": [0.01, 10]
+            },
+            "int": {
+                "n_estimators": [100, 1000],
+                "max_depth": [3, 20]
+            },
+            "choice": {
+                "booster": ["gbtree", "gblinear", "dart"]
+            },
+            "maximum": false,
+            "scoring": "neg_mean_squared_error"
+        }
+    }
+}

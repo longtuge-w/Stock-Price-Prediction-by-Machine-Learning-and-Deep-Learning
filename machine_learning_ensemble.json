@@ -1,0 +1,18 @@
+{
+    "classification": {
+        "save_dir": ".",
+        "model_names": ["LightGBM", "LightGBM", "LightGBM", "LightGBM", "LightGBM"],
+        "method": "classification",
+        "ensemble_method": "vote",
+        "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+        "params": null
+    },
+    "regression": {
+        "save_dir": ".",
+        "model_names": ["LightGBM", "LightGBM", "LightGBM", "LightGBM", "LightGBM"],
+        "method": "classification",
+        "ensemble_method": "vote",
+        "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+        "params": null
+    }
+}

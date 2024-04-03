@@ -1,0 +1,8 @@
+{
+    "backtest": {
+        "model_name": "LightGBM",
+        "method": "classification",
+        "tickers": ["FE"],
+        "price_data_dir": "./Factor/"
+    }
+}

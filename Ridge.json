@@ -1,0 +1,31 @@
+{
+    "model_name": "Ridge",
+    "ignore_cols": ["date", "Open", "High", "Low", "Close", "Volume", "Dividends", "Stock Splits", "ticker", "return", "label"],
+    "save_dir": ".",
+    "classification": {
+        "method": "classification",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "alpha": [0.1, 10]
+            },
+            "int": {},
+            "choice": {},
+            "maximum": true,
+            "scoring": "accuracy"
+        }
+    },
+    "regression": {
+        "method": "regression",
+        "params": null,
+        "hyperparams": {
+            "uniform": {
+                "alpha": [0.1, 10]
+            },
+            "int": {},
+            "choice": {},
+            "maximum": false,
+            "scoring": "neg_mean_squared_error"
+        }
+    }
+}
